@@ -1,6 +1,8 @@
 'use strict';
 
 {
+  const target = document.getElementById('target');
+
   function setWord() {
     word = words.splice(Math.floor(Math.random() * words.length), 1)[0];
     target.textContent = word;
@@ -14,12 +16,16 @@
     'SKELETON',
     'ZOMBIE',
   ];
+
   let word;
   let loc = 0;
   let startTime;
   let isPlaying;
 
-  const target = document.getElementById('target');
+  document.addEventListener('click', () => {
+    const disabled = document.getElementById('disabled');
+    disabled.remove();
+  });
 
   document.addEventListener('click', () => {
     if (isPlaying === true) {
