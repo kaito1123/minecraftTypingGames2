@@ -25,9 +25,7 @@
   document.addEventListener('click', () => {
     const disabled = document.getElementById('disabled');
     disabled.remove();
-  });
 
-  document.addEventListener('click', () => {
     if (isPlaying === true) {
       return;
     }
